@@ -3,3 +3,8 @@
 @theme {
     --font-poppins: "Poppins", "serif"; 
   }
+  @theme {
+    --color-brandcolor: #B88E2F; 
+    --color-primarycolor: #333333; 
+    --color-secondarycolor: #3A3A3A; 
+  }

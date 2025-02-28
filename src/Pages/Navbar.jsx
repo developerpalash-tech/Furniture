@@ -12,7 +12,7 @@ const Navbar = () => {
   return (
     <>
         <nav className='py-[30px]'>
-            <div className="container">
+            <div className="container mx-auto">
                 <div className="flex items-center justify-between">
                     <div className="logo">
                         <img src={logo} alt="logo" />
