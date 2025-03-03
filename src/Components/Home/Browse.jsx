@@ -2,14 +2,14 @@ import React from 'react'
 import dining from '../../assets/Images/Dining.png'
 import living from '../../assets/Images/Living.png'
 import bed from '../../assets/Images/Bed.png'
+import Commonhead from '../Common/Commonhead/Commonhead'
 
 const Browse = () => {
   return (
     <>
       <section className='py-14'>
         <div className="container m-auto">
-          <h2 className='text-center text-[32px] text-primarycolor font-bold font-poppins'>Browse The Range</h2>
-          <p className='text-center text-[20px] text-[#666666] font-normal font-poppins'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <Commonhead commonheadh2={'Browse The Range'} commonheadp={'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'}/>
           <div className="flex justify-between gap-5 mt-15">
             <div className="w-1/3">
               <img src={dining} alt="dining" className='w-full' />
@@ -26,6 +26,7 @@ const Browse = () => {
           </div>
         </div>
       </section>
+      
     </>
   )
 }
