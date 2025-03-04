@@ -6,7 +6,7 @@ import Button from '../Common/Button'
 const Banner = () => {
   return (
     <>
-<section
+      <section
         className="banner pt-[157px] pb-[117px]" style={{backgroundImage: `url(${banner})`, backgroundRepeat:'no-repeat', backgroundPosition:'center', backgroundSize:'cover'}}>
         <div className="container m-auto">
           <div className="w-1/2 px-[41px] pt-[60px] pb-[40px] ml-auto bg-[#FFF3E3]">

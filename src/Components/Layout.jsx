@@ -1,12 +1,14 @@
 import React from 'react'
-import Navbar from '../Pages/Navbar'
-import { Outlet } from 'react-router-dom'
 
+import { Outlet } from 'react-router-dom'
+import Navbar from './Home/Navbar'
+import Fotter from './Fotter'
 const Layout = () => {
   return (
     <>
         <Navbar/>
         <Outlet/>
+        <Fotter/>
     </>
   )
 }

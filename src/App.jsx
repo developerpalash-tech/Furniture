@@ -3,11 +3,13 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 import './App.css'
 import Layout from './Components/Layout'
 import Home from './Pages/Home'
+import Shop from './Pages/Shop'
 
 function App() {
   const myRoute=createBrowserRouter(createRoutesFromElements(
     <Route path='/' element={<Layout/>}>
       <Route index element={<Home/>}/>
+      <Route path='/shop' element={<Shop/>}/>
     </Route>
   ))
 
