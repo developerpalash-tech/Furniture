@@ -61,7 +61,18 @@
  grid-area: 6/10/8/12;
 }
 
-
+.pagination li a{
+  @apply py-4 px-6 bg-[#F9F1E7] rounded-[10px] cursor-pointer
+}
+.pagination li.selected a{
+  @apply bg-brandcolor 
+}
+.pagination li.previous a{
+  @apply hidden
+}
+.pagination li.next a{
+  @apply text-xl text-black font-poppins font-light leading-[30px]
+}
 
 
 

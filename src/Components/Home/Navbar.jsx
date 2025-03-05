@@ -5,6 +5,7 @@ import { FaRegHeart, FaRegUser } from "react-icons/fa";
 import { CiSearch } from 'react-icons/ci';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaBarsStaggered } from "react-icons/fa6";
+import CardSidebar from '../Card/CardSidebar';
 
 const Navbar = () => {
     const[show,setShow]=useState(false)
@@ -14,7 +15,7 @@ const Navbar = () => {
             <div className="container mx-auto">
                 <div className="flex items-center justify-between">
                     <div className="logo">
-                        <img src={logo} alt="logo" />
+                        <Link to={'/'}><img src={logo} alt="logo" /></Link>
                     </div>
                     {
                        show?
@@ -52,6 +53,7 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
+        <CardSidebar />
     </>
   )
 }
