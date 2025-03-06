@@ -5,10 +5,15 @@ import { FaRegHeart, FaRegUser } from "react-icons/fa";
 import { CiSearch } from 'react-icons/ci';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaBarsStaggered } from "react-icons/fa6";
-import CardSidebar from '../Card/CardSidebar';
+import CardSidebar from '../Cart/CartSidebar';
 
 const Navbar = () => {
     const[show,setShow]=useState(false)
+    const[showSideCart,setshowSideCart]=useState(false)
+
+    const handelCartBar=()=>{
+        setshowSideCart()
+    }
   return (
     <>
       <nav className='py-[30px] relative'>
@@ -43,7 +48,8 @@ const Navbar = () => {
                             <li><Link to={'#'}><FaRegUser/></Link></li>
                             <li><Link to={'#'}><CiSearch/></Link></li>
                             <li><Link to={'#'}><FaRegHeart /></Link></li>
-                            <li><Link to={'#'}><AiOutlineShoppingCart /></Link></li>
+                            <li onClick={()=>setshowSideCart(!showSideCart)}><Link to={'#'}><AiOutlineShoppingCart /></Link></li>
+                            
                         </ul>
                     </div>
                     <button onClick={()=>setShow(!show)} className='block lg:hidden'>
@@ -53,7 +59,9 @@ const Navbar = () => {
                 </div>
             </div>
         </nav>
-        <CardSidebar />
+        {
+            showSideCart&&<CardSidebar handelCartClose={handelCartBar}/>
+        }
     </>
   )
 }
