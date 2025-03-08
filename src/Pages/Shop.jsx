@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../Components/Shop/Banner'
 import Filter from '../Components/Shop/Filter'
 import Products from '../Components/Shop/Products'
+import CommonQuality from '../Components/CommonQuality'
 
 
 const Shop = () => {
@@ -10,6 +11,7 @@ const Shop = () => {
         <Banner/>
         <Filter/>
         <Products itemsPerPage={16}/>
+        <CommonQuality/>
     </>
   )
 }

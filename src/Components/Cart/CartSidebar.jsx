@@ -28,7 +28,7 @@ const CartSidebar = ({handelCartClose}) => {
                 </div>
                 <div className="flex justify-center items-center gap-[14px] pt-[26px] px-6">
                   <Cartbutton path={"/cart"} title={"Cart"}/>
-                  <Cartbutton path={"/cart"} title={"Checkout"}/>
+                  <Cartbutton path={"checkout"} title={"Checkout"}/>
                 </div>
             </div>
         </div>
