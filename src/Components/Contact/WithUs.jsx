@@ -59,7 +59,6 @@ const WithUs = () => {
                     <div className="">
                         <label className="text-base text-black font-poppins font-medium block pb-[22px]">Message</label>
                         <textarea name="" id="" placeholder="Hi! i’d like to ask about" className="w-[530px] pt-[25px] pb-[70px] px-8 border-[1px] border-[#9F9F9F] rounded-[10px] outline-none"></textarea>
-                        {/* <input type="text" placeholder="Enter your name" className="w-[530px] py-[25px] px-8 border-[1px] border-[#9F9F9F] rounded-[10px]" /> */}
                     </div>
                     <div className="text-center">
                         <Button title={"Submit"} path={"#"}/>

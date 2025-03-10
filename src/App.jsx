@@ -8,6 +8,7 @@ import ErrorPage from './Components/ErrorPage'
 import Cart from './Pages/Cart'
 import Checkout from './Pages/Checkout'
 import Contact from './Pages/Contact'
+import Blog from './Pages/Blog'
 
 function App() {
   const myRoute=createBrowserRouter(createRoutesFromElements(
@@ -17,6 +18,7 @@ function App() {
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/checkout' element={<Checkout/>}/>
       <Route path='/contact' element={<Contact/>}/>
+      <Route path='/blog' element={<Blog/>}/>
       <Route path='*' element={<ErrorPage/>}/>
 
     </Route>

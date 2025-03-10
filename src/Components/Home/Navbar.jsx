@@ -37,7 +37,7 @@ const Navbar = () => {
                        <ul className='w-1/2 lg:w-auto flex flex-col items-center gap-[75px] lg:flex-row  text-[16px] text-black font-poppins font-medium leading-[24px] absolute lg:static top-full left-0 bg-white h-screen lg:h-auto -translate-x-0 transition-all duration-[0.4s]'>
                            <li><Link to={'/'}>Home</Link></li>
                            <li><Link to={'/shop'}>Shop</Link></li>
-                           <li><Link to={'#'}>About</Link></li>
+                           <li><Link to={'/blog'}>About</Link></li>
                            <li><Link to={'/contact'}>Contact</Link></li>
                        </ul>
                    </div>
