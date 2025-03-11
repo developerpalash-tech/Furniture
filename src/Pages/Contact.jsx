@@ -6,7 +6,7 @@ import WithUs from '../Components/Contact/WithUs'
 const Contact = () => {
   return (
     <>
-        <CommonBanner/>
+        <CommonBanner title={'Contact'}/>
         <WithUs/>
         <CommonQuality/>
     </>

@@ -6,7 +6,7 @@ import BillingDetails from '../Components/Checkout/BillingDetails'
 const Checkout = () => {
   return (
     <>
-      <CommonBanner/>
+      <CommonBanner title={'Checkout'}/>
       <BillingDetails/>
       <CommonQuality/>
     </>

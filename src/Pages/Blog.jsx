@@ -10,7 +10,7 @@ import { FaCalendar } from "react-icons/fa";
 const Blog = () => {
   return (
     <>
-      <CommonBanner/>
+      <CommonBanner title={'Blog'}/>
       <section className='pt-[106px] pb-[54px]'>
         <div className="container m-auto">
           <div className="flex">
