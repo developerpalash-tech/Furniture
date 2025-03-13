@@ -1,5 +1,6 @@
 import banner from "../../assets/Images/shop_banner.png"
-import Breadcrumb from "../Breadcrumb"
+import Breadcrumb from "../Utilities/Breadcrumb"
+
 
 const Banner = () => {
   return (

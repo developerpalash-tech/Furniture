@@ -1,7 +1,7 @@
-import React from 'react'
-import Breadcrumb from './Breadcrumb'
-import banner from '../assets/Images/shop_banner.png'
-import logo_icon from "../assets/Images/logo_icon.png"
+
+import banner from '../../assets/Images/shop_banner.png'
+import logo_icon from "../../assets/Images/logo_icon.png"
+import Breadcrumb from '../Utilities/Breadcrumb'
 
 
 const CommonBanner = ({title}) => {

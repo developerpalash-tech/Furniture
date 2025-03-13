@@ -1,7 +1,7 @@
-import React from 'react'
-import CommonBanner from '../Components/CommonBanner'
-import CommonQuality from '../Components/CommonQuality'
+
 import WithUs from '../Components/Contact/WithUs'
+import CommonBanner from '../Components/Common/CommonBanner'
+import CommonQuality from '../Components/Common/CommonQuality'
 
 const Contact = () => {
   return (

@@ -1,7 +1,8 @@
-import React from 'react'
-import CommonBanner from '../Components/CommonBanner'
+
 import CartTotal from '../Components/Cart/CartTotal'
-import CommonQuality from '../Components/CommonQuality'
+import CommonBanner from '../Components/Common/CommonBanner'
+import CommonQuality from '../Components/Common/CommonQuality'
+
 
 
 const Cart = () => {

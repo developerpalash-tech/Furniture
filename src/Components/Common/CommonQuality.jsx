@@ -1,7 +1,8 @@
-import trophy from '../assets/Images/quality1.png'
-import warrenty from '../assets/Images/quality2.png'
-import shipping from '../assets/Images/quality3.png'
-import support from '../assets/Images/quality4.png'
+
+import trophy from '../../assets/Images/quality1.png'
+import warrenty from '../../assets/Images/quality2.png'
+import shipping from '../../assets/Images/quality3.png'
+import support from '../../assets/Images/quality4.png'
 
 const CommonQuality = () => {
   return (

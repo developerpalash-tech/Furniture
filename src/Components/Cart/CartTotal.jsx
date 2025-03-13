@@ -2,7 +2,8 @@ import React from 'react'
 import image from '../../assets/Images/Dining.png'
 import { Link } from 'react-router-dom'
 import { RiDeleteBin7Fill } from "react-icons/ri";
-import Cartbutton from './Cartbutton'
+import Cartbutton from '../Utilities/Cartbutton';
+
 
 
 const CartTotal = () => {

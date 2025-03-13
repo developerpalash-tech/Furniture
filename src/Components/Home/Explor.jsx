@@ -4,7 +4,7 @@ import slider2 from '../../assets/Images/Slider2.png'
 import { BsArrowRight } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import Slider from 'react-slick';
-import NextArrow from '../NextArrow';
+import NextArrow from '../Utilities/NextArrow';
 
 
 

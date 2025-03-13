@@ -1,6 +1,8 @@
-import React from 'react'
-import Breadcrumb from '../Components/Breadcrumb'
+
+import Details from '../Components/ProductDetails/Details'
 import RelatedProduct from '../Components/ProductDetails/RelatedProduct'
+import Description from '../Components/ProductDetails/Description'
+import Breadcrumb from '../Components/Utilities/Breadcrumb'
 
 const ProductDetails = () => {
   return (
@@ -8,6 +10,8 @@ const ProductDetails = () => {
             <div className='py-8 bg-[#F9F1E7]'>
                 <Breadcrumb/>
             </div>
+            <Details/>
+            <Description/>
             <RelatedProduct/>
     </section>
   )

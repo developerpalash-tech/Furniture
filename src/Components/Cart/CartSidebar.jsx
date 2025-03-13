@@ -1,7 +1,7 @@
 import { TbLockX } from "react-icons/tb";
 import SidebarItem from "./SidebarItem";
-import Cartbutton from "./Cartbutton";
 import { useState } from "react";
+import Cartbutton from "../Utilities/Cartbutton";
 
 
 const CartSidebar = ({handelCartClose}) => {

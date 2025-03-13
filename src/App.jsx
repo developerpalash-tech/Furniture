@@ -1,7 +1,6 @@
 
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 import './App.css'
-import Layout from './Components/Layout'
 import Home from './Pages/Home'
 import Shop from './Pages/Shop'
 import ErrorPage from './Components/ErrorPage'
@@ -10,6 +9,7 @@ import Checkout from './Pages/Checkout'
 import Contact from './Pages/Contact'
 import Blog from './Pages/Blog'
 import ProductDetails from './Pages/ProductDetails'
+import Layout from './Components/LayOut/Layout'
 
 function App() {
   const myRoute=createBrowserRouter(createRoutesFromElements(
