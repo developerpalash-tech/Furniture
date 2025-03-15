@@ -5,6 +5,7 @@ import { BsArrowRight } from "react-icons/bs";
 import "slick-carousel/slick/slick.css";
 import Slider from 'react-slick';
 import NextArrow from '../Utilities/NextArrow';
+import PrevArrow from '../Utilities/PrevArrow';
 
 
 
@@ -17,7 +18,7 @@ const Explor = () => {
         slidesToShow: 2,
         slidesToScroll: 1,
         nextArrow:<NextArrow/>,
-        prevArrow:<span></span>
+        prevArrow:<PrevArrow/>
       };
   return (
     <>
@@ -35,7 +36,7 @@ const Explor = () => {
                     <img src={slider1} alt="sliderimg" className='w-full h-full'/>
                 </div>
                 <div className="py-8 pl-8 pr-4 absolute left-6 bottom-6 bg-[#ffffff8e]">
-                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <h5 className='h-[1px] w-[27px] bg-[#616161]'></h5> Bed Room</p>
+                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <span className='h-[1px] w-[27px] bg-[#616161]'></span> Bed Room</p>
                     <p className='text-[28px] text-secondarycolor font-poppins font-semibold leading-[33.6px]'>Inner Peace</p>
                 </div>
                 <div className="py-[18px] px-[15px] bg-brandcolor text-white inline-block absolute left-[214px] bottom-6">
@@ -48,7 +49,7 @@ const Explor = () => {
                     <img src={slider2} alt="sliderimg" className='w-full h-full'/>
                 </div>
                 <div className="py-8 pl-8 pr-4 absolute left-6 bottom-6 bg-[#ffffff8e]">
-                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <h5 className='h-[1px] w-[27px] bg-[#616161]'></h5> Bed Room</p>
+                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <span className='h-[1px] w-[27px] bg-[#616161]'></span> Bed Room</p>
                     <p className='text-[28px] text-secondarycolor font-poppins font-semibold leading-[33.6px]'>Inner Peace</p>
                 </div>
                 <div className="py-[18px] px-[15px] bg-brandcolor text-white inline-block absolute left-[214px] bottom-6">
@@ -61,7 +62,7 @@ const Explor = () => {
                     <img src={slider1} alt="sliderimg" className='w-full h-full'/>
                 </div>
                 <div className="py-8 pl-8 pr-4 absolute left-6 bottom-6 bg-[#ffffff8e]">
-                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <h5 className='h-[1px] w-[27px] bg-[#616161]'></h5> Bed Room</p>
+                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <span className='h-[1px] w-[27px] bg-[#616161]'></span> Bed Room</p>
                     <p className='text-[28px] text-secondarycolor font-poppins font-semibold leading-[33.6px]'>Inner Peace</p>
                 </div>
                 <div className="py-[18px] px-[15px] bg-brandcolor text-white inline-block absolute left-[214px] bottom-6">
@@ -74,7 +75,7 @@ const Explor = () => {
                     <img src={slider1} alt="sliderimg" className='w-full h-full'/>
                 </div>
                 <div className=" py-8 pl-8 pr-4 absolute left-6 bottom-6 bg-[#ffffff8e]">
-                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <h5 className='h-[1px] w-[27px] bg-[#616161]'></h5> Bed Room</p>
+                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <span className='h-[1px] w-[27px] bg-[#616161]'></span> Bed Room</p>
                     <p className='text-[28px] text-secondarycolor font-poppins font-semibold leading-[33.6px]'>Inner Peace</p>
                 </div>
                 <div className="py-[18px] px-[15px] bg-brandcolor text-white inline-block absolute left-[214px] bottom-6">
@@ -86,7 +87,7 @@ const Explor = () => {
                     <img src={slider1} alt="sliderimg" className='w-full h-full'/>
                 </div>
                 <div className="py-8 pl-8 pr-4 absolute left-6 bottom-6 bg-[#ffffff8e]">
-                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <h5 className='h-[1px] w-[27px] bg-[#616161]'></h5> Bed Room</p>
+                    <p className='text-base text-[#616161] font-poppins font-semibold leading-[24px] flex items-center gap-2'> 01 <span className='h-[1px] w-[27px] bg-[#616161]'></span> Bed Room</p>
                     <p className='text-[28px] text-secondarycolor font-poppins font-semibold leading-[33.6px]'>Inner Peace</p>
                 </div>
                 <div className="py-[18px] px-[15px] bg-brandcolor text-white inline-block absolute left-[214px] bottom-6">
