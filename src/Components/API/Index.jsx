@@ -8,4 +8,6 @@ const productData=()=>{
         return err;
     }
 }
+
+
 export {productData}

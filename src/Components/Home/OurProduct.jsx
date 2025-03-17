@@ -12,7 +12,7 @@ const OurProduct = () => {
 
         })
     },[])
-    
+    productList.length=12;
   return (
     <>
         <section className='mb-[70px]'>

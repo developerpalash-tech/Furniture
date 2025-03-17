@@ -3,7 +3,7 @@ import product from "../assets/Images/Product1.png"
 import { Link } from 'react-router-dom'
 
 const ProductItems = ({palash}) => {
-    console.log(palash)
+   
   return (
     <>
         <div className=" cursor-pointer">
@@ -15,7 +15,7 @@ const ProductItems = ({palash}) => {
                     <button className='text-base text-brandcolor font-poppins font-semibold leading-[24px] py-3 px-14 bg-white'>Add to cart</button>
                 </div>
             </div>
-            <Link to={'/shop/details'}>
+            <Link to={`/shop/${palash?.id}`}>
                 <div className="mt-4 px-[18px] ">
                     <p className='text-2xl text-secondarycolor font-poppins font-semibold leading-[28px]'>{palash?.title}</p>
                     <p className='text-base text-[#898989] font-poppins font-medium leading-[24px]'>{palash?.description.substring(0, 70)}...</p>
