@@ -2,21 +2,30 @@ import React, { useState } from 'react'
 import ProductSlide from "product-slide";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../ProductSlice';
 
 
 const Details = ({data}) => {
-  
-  const [selectOption,setselectOption]=useState("")
+  data.size=['L','XL','XS']
+  const [selectOption,setselectOption]=useState(data.size[0])
   const [selectColor,setselectColor]=useState("")
   const [quantity,setQuantity]=useState(1)
+  const dispatch=useDispatch()
   const settings = {
     direction: "vertical", // or "horizontal"
     zoom: true,          // or false
   };
-
+const handelAddtoCart=()=>{
+  data={
+    ...data,
+    size:selectOption,
+    color:selectColor,
+    quantity:quantity,
+  }
+dispatch(addToCart(data))
   
-    
-    console.log(data)
+}
   return (
     <section className='pt-[55px] pb-[104px]'>
         <div className="container m-auto">
@@ -74,7 +83,7 @@ const Details = ({data}) => {
                   <p>{quantity}</p>
                   <button onClick={()=>setQuantity(quantity+1)}>+</button>
                 </div>
-                <button className='py-4 px-12 border-[1px] border-[#000000] rounded-2xl'>Add To Cart</button>
+                <button onClick={handelAddtoCart} className='py-4 px-12 border-[1px] border-[#000000] rounded-2xl'>Add To Cart</button>
                 <button className='py-4 px-12 border-[1px] border-[#000000] rounded-2xl'>+ Compare</button>
               </div>
             </div>

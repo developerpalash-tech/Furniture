@@ -11,7 +11,7 @@ const RelatedProduct = ({products}) => {
               <div className=" grid grid-cols-4 gap-8">
                 {
                   shortListProduct.map((item)=>(
-                    <ProductItems key={item.id} data={item}/>
+                    <ProductItems key={item.id} palash={item}/>
                   ))
                 }
               </div>

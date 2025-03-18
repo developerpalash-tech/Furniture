@@ -2,9 +2,12 @@ import { TbLockX } from "react-icons/tb";
 import SidebarItem from "./SidebarItem";
 import { useState } from "react";
 import Cartbutton from "../Utilities/Cartbutton";
+import { useSelector } from "react-redux";
 
 
 const CartSidebar = ({handelCartClose}) => {
+  const productList=useSelector((state)=>state)
+  console.log(productList);
   
   return (
     <>

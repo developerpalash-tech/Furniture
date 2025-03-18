@@ -18,7 +18,7 @@ const ProductDetails = () => {
             if(item.id==param.id){
               setsingleProduct(item);
               for(let related of res.data){
-                if(item.category.name==res.data.category.name){
+                if(item.category.name==related.category.name){
                   setRelatedProductList((prev)=>[...prev,related])
                 }
               }
@@ -30,12 +30,12 @@ const ProductDetails = () => {
         }).catch((err)=>{
 
         })
-    },[])
+    },[param.id])
     
   return (
     <section>
             <div className='py-8 bg-[#F9F1E7]'>
-                <Breadcrumb/>
+                <Breadcrumb title={singleProduct.title}/>
             </div>
             <Details data={singleProduct}/>
             <Description/>
