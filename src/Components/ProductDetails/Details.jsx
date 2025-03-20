@@ -22,6 +22,8 @@ const handelAddtoCart=()=>{
     size:selectOption,
     color:selectColor,
     quantity:quantity,
+    images:data?.images[0],
+    price:data?.price*quantity
   }
 dispatch(addToCart(data))
   

@@ -1,13 +1,13 @@
 import { TbLockX } from "react-icons/tb";
 import SidebarItem from "./SidebarItem";
-import { useState } from "react";
 import Cartbutton from "../Utilities/Cartbutton";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
 
 const CartSidebar = ({handelCartClose}) => {
-  const productList=useSelector((state)=>state)
-  console.log(productList);
+  const productList=useSelector((state)=>state.productData.value)
+  const totalPrice=productList.reduce((total, product)=>total+product.price,0)
   
   return (
     <>
@@ -18,16 +18,16 @@ const CartSidebar = ({handelCartClose}) => {
                     <TbLockX className="text-[#9F9F9F] text-2xl" onClick={()=>handelCartClose(false)}/>
                 </div>
                 <div className="sidebar h-[460px] overflow-y-scroll px-6">
-                  <SidebarItem/>
-                  <SidebarItem/>
-                  <SidebarItem/>
-                  <SidebarItem/>
-                  <SidebarItem/>
-                  <SidebarItem/>
+                 {
+                  productList.map((item)=>(
+                    <SidebarItem key={item.key} data={item}/>
+                  ))
+                 }
+                  
                 </div>
                 <div className="flex items-center pt-2 pb-6 border-b border-b-[#D9D9D9] px-6">
                   <p className="text-base text-black font-poppins font-normal">Subtotal</p>
-                  <p className="text-base text-brandcolor font-poppins font-semibold pl-[100px]">BDT. 520,000.00</p>
+                  <p className="text-base text-brandcolor font-poppins font-semibold pl-[100px]">BDT. {totalPrice}</p>
                 </div>
                 <div className="flex justify-center items-center gap-[14px] pt-[26px] px-6">
                   <Cartbutton path={"/cart"} title={"Cart"}/>

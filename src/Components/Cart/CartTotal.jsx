@@ -1,12 +1,15 @@
 import React from 'react'
 import image from '../../assets/Images/Dining.png'
 import { Link } from 'react-router-dom'
-import { RiDeleteBin7Fill } from "react-icons/ri";
 import Cartbutton from '../Utilities/Cartbutton';
+import { useSelector } from 'react-redux';
+import CartItems from './CartItems';
 
 
 
 const CartTotal = () => {
+    const productList=useSelector((state)=>state.productData.value)
+  const totalPrice=productList.reduce((total, product)=>total+product.price,0)
   return (
     <section className='py-[66px]'>
         <div className="container m-auto">
@@ -18,23 +21,19 @@ const CartTotal = () => {
                     <li><h3>Quantity</h3></li>
                     <li><h3>Subtotal</h3></li>
                 </ul>
-                <div className="flex justify-between  items-center pt-14">
-                    <div className="w-[108px] h-[105px]">
-                        <img src={image} alt="img" />
-                    </div>
-                    <p>Asgaard sofa</p>
-                    <p>Rs. 250,000.00</p>
-                    <div className="w-8 h-8 border-[1px] border-[#9F9F9F] rounded-[5px] text-center leading-8">1</div>
-                    <p>Rs. 250,000.00</p>
-                    <RiDeleteBin7Fill className='text-2xl text-brandcolor mr-6'/>
-                </div>
+                {
+                  productList.map((item)=>(
+                    <CartItems key={item.key} data={item}/>
+                  ))  
+                }
+                
                 </div>
                 
                 <div className="w-4/12 px-[75px] pt-4 pb-20 bg-[#F9F1E7] h-fit">
                     <h2 className='text-center text-[32px] text-black font-poppins font-semibold leading-normal pb-[61px]'>Cart Totals</h2>
                     <div className="flex justify-between items-center pb-[31px]">
                         <h3 className='text-[16px] text-black font-poppins font-medium'>Subtotal</h3>
-                        <p className='text-[16px] text-[#9F9F9F] font-poppins font-normal'>BDT. 250,000.00</p>
+                        <p className='text-[16px] text-[#9F9F9F] font-poppins font-normal'>BDT. {totalPrice}</p>
                     </div>
                     <div className="flex justify-between pb-11">
                         <h3 className='text-[16px] text-black font-poppins font-medium'>Total</h3>
