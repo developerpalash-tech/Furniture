@@ -23,7 +23,7 @@ const handelAddtoCart=()=>{
     color:selectColor,
     quantity:quantity,
     images:data?.images[0],
-    price:data?.price*quantity
+    individualPrice:data?.price*quantity
   }
 dispatch(addToCart(data))
   

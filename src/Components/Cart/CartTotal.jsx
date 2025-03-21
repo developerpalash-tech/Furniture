@@ -9,13 +9,13 @@ import CartItems from './CartItems';
 
 const CartTotal = () => {
     const productList=useSelector((state)=>state.productData.value)
-  const totalPrice=productList.reduce((total, product)=>total+product.price,0)
+  const totalPrice=productList.reduce((total, product)=>total+product.individualPrice,0)
   return (
     <section className='py-[66px]'>
         <div className="container m-auto">
             <div className="flex justify-between gap-[30px]">
                 <div className="w-8/12 ">
-                <ul className='flex  justify-center gap-32 ml-14 text-base text-black font-poppins font-semibold py-4 px-[144px] bg-[#F9F1E7]'>
+                <ul className='flex justify-end gap-32 ml-14 text-base text-black font-poppins font-semibold py-4 px-[144px] bg-[#F9F1E7]'>
                     <li><h3>Product</h3></li>
                     <li><h3>Price</h3></li>
                     <li><h3>Quantity</h3></li>
@@ -37,7 +37,7 @@ const CartTotal = () => {
                     </div>
                     <div className="flex justify-between pb-11">
                         <h3 className='text-[16px] text-black font-poppins font-medium'>Total</h3>
-                        <p className='text-[20px] text-brandcolor font-poppins font-medium'>BDT. 250,000.00</p>
+                        <p className='text-[20px] text-brandcolor font-poppins font-medium'>BDT. {totalPrice}</p>
                     </div>
                     <div className="text-center text-[20px] text-black font-poppins font-normal">
                         <Cartbutton title={'Check Out'} path={'/checkout'}/>
