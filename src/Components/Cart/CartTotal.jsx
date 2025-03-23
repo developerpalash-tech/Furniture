@@ -13,7 +13,10 @@ const CartTotal = () => {
   return (
     <section className='py-[66px]'>
         <div className="container m-auto">
-            <div className="flex justify-between gap-[30px]">
+            {
+                productList.length>0
+                ?
+                <div className="flex justify-between gap-[30px]">
                 <div className="w-8/12 ">
                 <ul className='flex justify-end gap-32 ml-14 text-base text-black font-poppins font-semibold py-4 px-[144px] bg-[#F9F1E7]'>
                     <li><h3>Product</h3></li>
@@ -21,11 +24,12 @@ const CartTotal = () => {
                     <li><h3>Quantity</h3></li>
                     <li><h3>Subtotal</h3></li>
                 </ul>
-                {
-                  productList.map((item)=>(
-                    <CartItems key={item.key} data={item}/>
-                  ))  
-                }
+                
+                   {
+                    productList.map((item)=>(
+                      <CartItems key={item.key} data={item}/>
+                    ))  
+                  }
                 
                 </div>
                 
@@ -42,10 +46,18 @@ const CartTotal = () => {
                     <div className="text-center text-[20px] text-black font-poppins font-normal">
                         <Cartbutton title={'Check Out'} path={'/checkout'}/>
                     </div>
-                    
                 </div>
-                
             </div>
+            :
+            <div className="text-center">
+                <p className="text-xl font-bold font-poppins  pb-10">There is no item in this cart!</p>
+                <Cartbutton path={'/shop'} title={'Continue Shopping'}/>
+            </div>
+            }
+            
+            
+           
+            
         </div>
         
     </section>
@@ -54,3 +66,7 @@ const CartTotal = () => {
 }
 
 export default CartTotal
+{/* <div className="text-center">
+                <p className="text-xl font-bold font-poppins  pb-10">There is no item in this cart!</p>
+                <Cartbutton path={'/shop'} title={'Continue Shopping'}/>
+            </div> */}

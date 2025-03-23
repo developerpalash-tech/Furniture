@@ -6,14 +6,18 @@ import { CiSearch } from 'react-icons/ci';
 import { AiOutlineShoppingCart } from 'react-icons/ai';
 import { FaBarsStaggered } from "react-icons/fa6";
 import CardSidebar from '../Cart/CartSidebar';
+import {useSelector} from 'react-redux'
 
 const Navbar = () => {
     const[show,setShow]=useState(false)
     const[showSideCart,setshowSideCart]=useState(false)
+    const productList=useSelector((state)=>state.productData.value)
 
     const handelCartBar=()=>{
         setshowSideCart()
     }
+    console.log(productList.length);
+    
   return (
     <>
       <nav className='py-[30px] relative'>
@@ -48,7 +52,10 @@ const Navbar = () => {
                             <li><Link to={'#'}><FaRegUser/></Link></li>
                             <li><Link to={'#'}><CiSearch/></Link></li>
                             <li><Link to={'#'}><FaRegHeart /></Link></li>
-                            <li onClick={()=>setshowSideCart(!showSideCart)}><Link to={'#'}><AiOutlineShoppingCart /></Link></li>
+                            <li onClick={()=>setshowSideCart(!showSideCart)} className='relative'>
+                                <AiOutlineShoppingCart className='text-3xl cursor-pointer'/>
+                                <span className='absolute -top-4 -right-4 bg-brandcolor h-6 w-6 rounded-full flex justify-center items-center text-white text-base'>{productList.length}</span>
+                            </li>
                             
                         </ul>
                     </div>

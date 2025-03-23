@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalf } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../../ProductSlice';
+import { Bounce, toast, ToastContainer } from 'react-toastify';
 
 
 const Details = ({data}) => {
@@ -26,11 +27,23 @@ const handelAddtoCart=()=>{
     individualPrice:data?.price*quantity
   }
 dispatch(addToCart(data))
+toast.success('Product add to cart successfully', {
+  position: "top-center",
+  autoClose: 5000,
+  hideProgressBar: false,
+  closeOnClick: false,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "colored",
+  transition: Bounce,
+  });
   
 }
   return (
     <section className='pt-[55px] pb-[104px]'>
         <div className="container m-auto">
+        <ToastContainer />
           <div className="flex gap-20">
             <div className="w-2/5">
               <ProductSlide settings={settings} api={data.images} />
