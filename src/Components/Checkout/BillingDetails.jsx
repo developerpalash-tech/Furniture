@@ -5,7 +5,7 @@ import SelectBox from '../Utilities/SelectBox'
 
 const BillingDetails = () => {
     const productList=useSelector((state)=>state.productData.value)
-    const totalPrice=productList.reduce((total, product)=>total+product.individualPrice,0)
+    const totalPrice=productList.reduce((total, product)=>total+product.total,0)
   return (
     <section className='pt-[63px] pb-[52px]'>
         <div className="container m-auto">
@@ -39,7 +39,7 @@ const BillingDetails = () => {
                                    productList.map((item)=>(
                                     <div key={item.key} className="flex justify-between">
                                         <p className='text-base text-[#9F9F9F] font-poppins font-normal'>{item?.title}<span className='text-[12px] text-[#000000] font-poppins font-medium pl-3'>X {item.quantity}</span></p>
-                                        <p className='text-base text-black font-poppins font-light'>BDT. {item?.price}</p>
+                                        <p className='text-base text-black font-poppins font-light'>BDT. {item?.total}</p>
                                     </div>
                                    )) 
                                 }
@@ -47,12 +47,12 @@ const BillingDetails = () => {
 
                                 <div className="flex justify-between">
                                     <p className='text-base text-[#000000] font-poppins font-normal py-6'>Subtotal</p>
-                                    <p className='text-base text-[#000000] font-poppins font-normal py-6'>BDT. 250,000.00</p>
+                                    <p className='text-base text-[#000000] font-poppins font-normal py-6'>BDT. {totalPrice}</p>
                                 </div>
 
                                 <div className="flex justify-between">
                                     <p className='text-base text-[#000000] font-poppins font-normal'>Total</p>
-                                    <p className='text-base text-brandcolor font-poppins font-normal'>BDT. 250,000.00</p>
+                                    <p className='text-base text-brandcolor font-poppins font-normal'>BDT. {totalPrice}</p>
                                 </div>
 
                                 

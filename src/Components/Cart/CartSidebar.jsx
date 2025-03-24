@@ -7,7 +7,7 @@ import { useEffect, useRef, useState } from "react";
 
 const CartSidebar = ({handelCartClose}) => {
   const productList=useSelector((state)=>state.productData.value)
-  const totalPrice=productList.reduce((total, product)=>total+product.individualPrice,0)
+  const totalPrice=productList.reduce((total, product)=>total+product.total,0)
 
   const cartref=useRef(null)
 

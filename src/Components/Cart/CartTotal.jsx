@@ -9,7 +9,7 @@ import CartItems from './CartItems';
 
 const CartTotal = () => {
     const productList=useSelector((state)=>state.productData.value)
-  const totalPrice=productList.reduce((total, product)=>total+product.individualPrice,0)
+  const totalPrice=productList.reduce((total, product)=>total+product.total,0)
   return (
     <section className='py-[66px]'>
         <div className="container m-auto">

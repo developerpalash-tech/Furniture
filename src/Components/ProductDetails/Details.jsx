@@ -24,8 +24,9 @@ const handelAddtoCart=()=>{
     color:selectColor,
     quantity:quantity,
     images:data?.images[0],
-    individualPrice:data?.price*quantity
+    total:data?.price*quantity
   }
+  console.log(data);
 dispatch(addToCart(data))
 toast.success('Product add to cart successfully', {
   position: "top-center",
@@ -61,7 +62,7 @@ toast.success('Product add to cart successfully', {
                 </ul>
                 <p className='text-[13px] text-[#9F9F9F] font-poppins font-normal leading-[13px] border-l-[1px] border-l-[#9F9F9F] pl-[22px]'>5 Customer Review</p>
               </div>
-              <p className='text-[14px] text-black font-poppins font-normal leading-[13px] pt-[18px]'>{data?.description}</p>
+              <p className='text-[14px] text-black font-poppins font-normal leading-[14px] pt-[18px]'>{data?.description}</p>
               <p className='text-[14px] text-[#9F9F9F] font-poppins font-normal leading-[14px] pt-[22px] pb-[12px]'>Size</p>
               <div className="flex gap-4">
                 <label htmlFor="L" className={`h-8 w-8 ${selectOption==="L"? "bg-[#B88E2F]":"bg-[#F9F1E7]"}  rounded-[5px] cursor-pointer flex justify-center items-center`}>

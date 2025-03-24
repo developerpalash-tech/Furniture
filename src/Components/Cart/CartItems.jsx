@@ -14,7 +14,7 @@ const CartItems = ({data}) => {
             <p>{data?.title}</p>
             <p>BDT. {data?.price}</p>
             <div className="w-8 h-8 border-[1px] border-[#9F9F9F] rounded-[5px] text-center leading-8">{data?.quantity}</div>
-            <p>BDT. {data?.individualPrice}</p>
+            <p>BDT. {data?.total}</p>
             <RiDeleteBin7Fill onClick={()=>dispatch(removeFromCard(data?.id))} className='text-2xl text-brandcolor mr-6'/>
         </div>
     </>
