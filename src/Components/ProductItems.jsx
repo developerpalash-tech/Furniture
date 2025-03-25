@@ -3,6 +3,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const ProductItems = ({palash}) => {
+   console.log(palash);
    
 
 
@@ -11,7 +12,7 @@ const ProductItems = ({palash}) => {
         <Link to={`/shop/${palash?.id}`} className=" relative group overflow-hidden h-fit">
             <div className=" ">
                 <div className="w-full">
-                    <img src={palash?.images[0]} alt="img" className='w-full' />
+                    <img src={palash?.category.image} alt="img" className='w-full' />
                 </div>
                 <div className=" absolute bg-[#3a3a3a93] w-full h-full top-0 left-0 flex justify-center items-center scale-0 group-hover:scale-100 transition-all duration-[0.5s]">
                     <button className='text-base text-brandcolor font-poppins font-semibold leading-[24px] py-3 px-14 bg-white'>Add to cart</button>
